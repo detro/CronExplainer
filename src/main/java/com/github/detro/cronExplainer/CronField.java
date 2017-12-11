@@ -1,4 +1,4 @@
-package org.github.detro.cronExplainer;
+package com.github.detro.cronExplainer;
 
 import com.google.common.base.Joiner;
 import com.google.common.collect.ContiguousSet;

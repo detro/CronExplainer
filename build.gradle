@@ -12,7 +12,7 @@ repositories {
 }
 
 // Define the main class for the application
-mainClassName = 'org.github.detro.cronExplainer.Main'
+mainClassName = 'com.github.detro.cronExplainer.Main'
 
 dependencies {
     // Guava
@@ -31,7 +31,7 @@ dependencies {
 jar {
     manifest {
         attributes 'Main-Class': mainClassName,
-                'Class-Path': configurations.runtime.files.collect { "$it.name" }.join(' ')
+                   'Class-Path': configurations.runtime.files.collect { "$it.name" }.join(' ')
     }
 }
 
