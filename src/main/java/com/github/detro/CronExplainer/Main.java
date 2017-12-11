@@ -1,4 +1,4 @@
-package com.github.detro.cronExplainer;
+package com.github.detro.CronExplainer;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;

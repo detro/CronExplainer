@@ -12,7 +12,7 @@ repositories {
 }
 
 // Define the main class for the application
-mainClassName = 'com.github.detro.cronExplainer.Main'
+mainClassName = 'com.github.detro.CronExplainer.Main'
 
 dependencies {
     // Guava
