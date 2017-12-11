@@ -1,0 +1,37 @@
+// Apply the java plugin to add support for Java
+apply plugin: 'java'
+
+// Apply the application plugin to add support for building an application
+apply plugin: 'application'
+
+// In this section you declare where to find the dependencies of your project
+repositories {
+    // Use jcenter for resolving your dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    jcenter()
+}
+
+// Define the main class for the application
+mainClassName = 'org.github.detro.cronExplainer.Main'
+
+dependencies {
+    // Guava
+    compile 'com.google.guava:guava:23.5-jre'
+
+    // Logging
+    compile 'org.slf4j:slf4j-api:1.7.25'
+    compile 'org.slf4j:slf4j-log4j12:1.7.25'
+    compile 'org.apache.logging.log4j:log4j-api:2.10.0'
+    compile 'org.apache.logging.log4j:log4j-core:2.10.0'
+
+    // Use JUnit test framework
+    testCompile 'junit:junit:4.12'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': mainClassName,
+                'Class-Path': configurations.runtime.files.collect { "$it.name" }.join(' ')
+    }
+}
+
