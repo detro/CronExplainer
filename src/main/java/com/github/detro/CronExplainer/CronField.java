@@ -54,8 +54,6 @@ public abstract class CronField {
   protected final long jvmStartupTime;
 
   public CronField(String input, Range<Integer> possibleValues) {
-    // TODO handle frequency i.e. "*/10"
-
     // Used by sub-classes to figure out the "startup time"
     jvmStartupTime = ManagementFactory.getRuntimeMXBean().getStartTime();
 
